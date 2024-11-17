@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(135deg, #8e1c8e, #ff4f5b);
+    color: black;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+audio {
+    display: none; /* Oculta o player de áudio na página */
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    background: url('https://images.unsplash.com/photo-1607633321390-7b509d8d32c4?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhY2h8Nnx8Y2hyaXN0bWFzfGVufDB8fHx8fDE2Mzc2MTk1OTI&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center;
+    background-size: cover;
+    padding: 0 20px;
+}
+
+.header-content {
+    z-index: 2;
+}
+
+.header h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.sub-heading {
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeInText 3s ease-in-out forwards;
+    margin-bottom: 40px;
+}
+
+.countdown {
+    font-size: 2rem;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInCountdown 3s ease-in-out forwards;
+    color: #ffeb3b;
+}
+
+.btn-cta {
+    padding: 20px 40px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeInButton 3s ease-in-out forwards;
+}
+
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.snowflake {
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);  /* Inicia acima da tela */
+    }
+    100% {
+        transform: translateY(100vh);  /* Desce até o final da tela */
+    }
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInCountdown {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInButton {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
